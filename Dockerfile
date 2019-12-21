@@ -7,4 +7,4 @@ RUN apk add --update --no-cache python py-pip && \
     pip install ansible && \
     apk del build_dependencies
 
-CMD ansible-galaxy role import --api-key ${galaxy_api_key}
+CMD ansible-galaxy role import --api-key ${galaxy_api_key} $(echo $GITHUB_REPOSITORY | cut -d/ -f1) $(echo $GITHUB_REPOSITORY | cut -d/ -f2)
