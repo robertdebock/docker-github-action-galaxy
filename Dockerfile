@@ -1,5 +1,7 @@
 FROM python:3.7-alpine
 
+LABEL maintainer="Robert de Bock <robert@meinit.nl>"
+
 WORKDIR /github/workspace
 
 RUN apk add --update --no-cache python py-pip && \
