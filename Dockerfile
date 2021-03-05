@@ -5,7 +5,7 @@ LABEL maintainer="Robert de Bock <robert@meinit.nl>"
 WORKDIR /github/workspace
 
 RUN apk add --update --no-cache python3 py-pip && \
-    apk add --update --no-cache --virtual build_dependencies gcc musl-dev libffi-dev openssl-dev && \
+    apk add --update --no-cache --virtual build_dependencies gcc musl-dev libffi-dev openssl-dev rust cargo && \
     pip install ansible && \
     apk del build_dependencies
 
