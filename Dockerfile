@@ -1,7 +1,7 @@
 FROM python:3.9-alpine
 
 LABEL maintainer="Robert de Bock <robert@meinit.nl>"
-LABEL build_date="2021-10-22"
+LABEL build_date="2021-12-02"
 
 WORKDIR /github/workspace
 
