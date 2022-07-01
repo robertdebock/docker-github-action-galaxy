@@ -10,4 +10,4 @@ RUN apk add --update --no-cache --virtual build_dependencies gcc musl-dev libffi
     rm -rf /root/.cache /root/.cargo && \
     apk del build_dependencies
 
-CMD cd ${path:-./} ; ansible-galaxy role import --api-key ${galaxy_api_key} --branch ${git_branch} $(echo $GITHUB_REPOSITORY | cut -d/ -f1) $(echo $GITHUB_REPOSITORY | cut -d/ -f2)
+CMD set -o pipefail ; cd ${path:-./} ; ansible-galaxy role import --api-key ${galaxy_api_key} --branch ${git_branch} $(echo $GITHUB_REPOSITORY | cut -d/ -f1) $(echo $GITHUB_REPOSITORY | cut -d/ -f2)
