@@ -1,7 +1,7 @@
-FROM python:alpine3.17
+FROM python:alpine
 
 LABEL maintainer="Robert de Bock <robert@meinit.nl>"
-LABEL build_date="2023-06-13"
+LABEL build_date="2024-01-11"
 
 WORKDIR /github/workspace
 
